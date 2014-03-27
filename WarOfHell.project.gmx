@@ -114,7 +114,6 @@
       <path>paths\Patrol1</path>
     </paths>
   </paths>
-  <scripts name="scripts"/>
   <fonts name="fonts">
     <font>fonts\font_gui</font>
     <font>fonts\font_gui_mini</font>
