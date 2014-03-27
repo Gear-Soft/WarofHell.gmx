@@ -156,7 +156,8 @@ if mouse_check_button_pressed(mb_left)
         if shot_charge_prim &gt;= 30
         {
         shot_index = 1
-        audio_play_sound(snd_shot, true, 0) 
+        //sound_play(snd_shot)
+        audio_play_sound(snd_shot, true, 0) //&lt;- Das nur wenn NEw AUdio Engine
         //audio_play_sound((working_directory + "\data\sounds\snd_mgshot.ogg"), true, 0) 
         id_bullet = instance_create(x,y,obj_bullet)
         id_bullet.direction = point_direction(x,y,mouse_x,mouse_y)
@@ -173,6 +174,7 @@ if mouse_check_button(mb_right)
     {
         if shot_charge_sec &gt;= 10
         {
+        //sound_play(snd_mgshot)
         audio_play_sound(snd_mgshot, true, 0) 
         id_bullet1 = instance_create(MGX,MGY,obj_MGbullet)
         id_bullet1.direction = point_direction(x,y,mouse_x,mouse_y)

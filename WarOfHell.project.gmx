@@ -46,6 +46,7 @@
       <sprite>sprites\spr_shopsign</sprite>
       <sprite>sprites\spr_KFZ</sprite>
       <sprite>sprites\spr_tankdeco</sprite>
+      <sprite>sprites\spr_house1</sprite>
     </sprites>
     <sprites name="projectiles">
       <sprite>sprites\spr_bulletenemy</sprite>
@@ -115,6 +116,9 @@
       <object>objects\obj_bulletenemy</object>
     </objects>
     <objects name="Buildings">
+      <objects name="houses">
+        <object>objects\obj_house1</object>
+      </objects>
       <object>objects\obj_hangar</object>
       <object>objects\obj_defwall</object>
       <object>objects\obj_defwalldoor</object>

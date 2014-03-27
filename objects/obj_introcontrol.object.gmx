@@ -34,10 +34,10 @@ global.musicv = 0.3
 global.sfxv = 1
 
 alarm[0] = room_speed*6.5
-sound_volume(snd_intro, global.musicv)
-sound_play(snd_intro) //"Funktioniert nicht"
+//sound_volume(snd_intro, global.musicv)
+//sound_play(snd_intro) //"Funktioniert nicht"
 
-//audio_play_sound(snd_intro, true, 0)
+audio_play_sound(snd_intro, true, 0)
 
 </string>
           </argument>
