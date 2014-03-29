@@ -57,7 +57,7 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(Level1)
+            <string>room_goto(F5)
 </string>
           </argument>
         </arguments>
