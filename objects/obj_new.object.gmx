@@ -29,6 +29,7 @@
 {
     global.music = sga_TrackPlay(-1, global.musicf + "music1.ogg", 0, 0)
     sga_SetVol(global.music, global.musicv)
+    global.wasmenu = true
 }
 
 show_debug_message(string(global.music))

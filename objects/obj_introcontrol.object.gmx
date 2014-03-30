@@ -25,8 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Sound Engine Initalisieren
+            <string>global.inifile = "datas.ini"
+global.musicv = 0.5
+global.sfxv = 0.5
+
+//Sound Engine Initalisieren
 sga_Init();
+
+//Ini Datei Laden
+if !file_exists(global.inifile)
+    {
+    ini_open(global.inifile)
+    ini_write_real("Volume","musicv", global.musicv)
+    ini_write_real("Volume","sfxv", global.sfxv)
+    ini_close()
+    }
+    else
+    {
+    ini_open(global.inifile)
+    global.musicv = ini_read_real("Volume","musicv", '')
+    global.sfxv = ini_read_real("Volume","sfxv", '')
+    ini_close()
+    }
 
 //Globale Variablen
 global.music = ""
@@ -37,8 +57,6 @@ global.money = 1000
 global.lastroom = Menu
 global.ptower = "Mini"
 global.info = ""
-global.musicv = 0.1
-global.sfxv = 0.1
 
 alarm[0] = room_speed*6.5
 //sound_volume(snd_intro, global.musicv)
