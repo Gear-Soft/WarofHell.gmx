@@ -72,7 +72,9 @@ if distance_to_object(obj_Player) &lt; 400
     if reload &gt;= 10
     {
         //sound_play(snd_mgshot)
-        audio_play_sound(snd_mgshot, true, 0) 
+        shotsoundMG = sga_TrackPlay(-1, global.soundf + "snd_mgshot.ogg", 0, 0)
+        sga_SetVol(shotsoundMG, global.sfxv)
+        
         id_bullet1 = instance_create(MGX,MGY,obj_enemyMGbullet)
         id_bullet1.direction = point_direction(x,y,obj_Player.x,obj_Player.y)
         id_bullet1.image_angle = point_direction(x,y,obj_Player.x,obj_Player.y)

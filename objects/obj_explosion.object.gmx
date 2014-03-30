@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0.25
-audio_play_sound(snd_explosion, true, 0)
+sound = sga_TrackPlay(-1, global.soundf + "snd_explosion.ogg", 0, 0)
+sga_SetVol(sound, global.sfxv)
 </string>
           </argument>
         </arguments>

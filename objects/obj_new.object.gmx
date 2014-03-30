@@ -8,6 +8,35 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.wasmenu = false
+{
+    global.music = sga_TrackPlay(-1, global.musicf + "music1.ogg", 0, 0)
+    sga_SetVol(global.music, global.musicv)
+}
+
+show_debug_message(string(global.music))
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -34,6 +63,13 @@ else
 {
     image_xscale = 1
     image_yscale = 1
+}
+
+if sga_IsPlaying(global.music) = false
+{
+    sga_DestroyEmitter(global.music)
+    global.music = sga_TrackPlay(-1, global.musicf + "music2.ogg", 0, 0)
+    sga_SetVol(global.music, global.musicv)
 }
 </string>
           </argument>

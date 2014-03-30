@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>HUD = ""
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,33 +48,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//HUD TEXTE
+            <string>//HUD Sprite
+if instance_exists(obj_control)
+    draw_sprite(spr_HUD,image_index,view_xview,view_yview+720)
+
+//HUD TEXTE
 
 //Geld Anzeige
-draw_set_color(c_black) //make_color_rgb(180,180,0)
+draw_set_color(c_orange)
 draw_set_font(font_gui)
-draw_text(view_xview+402,view_yview,"Geld: "+string(global.money))
+draw_text(view_xview+70,view_yview + 670,"Geld: "+string(global.money))
 
-draw_set_color(c_white) //make_color_rgb(180,180,0)
-draw_set_font(font_gui)
-draw_text(view_xview+400,view_yview-2,"Geld: "+string(global.money))
+
+//draw_set_color(c_white) //make_color_rgb(180,180,0)
+//draw_set_font(font_gui)
+//draw_text(view_xview+48,view_yview-2,"Geld: "+string(global.money))
 
 
 //Info Anzeige
 if global.info != ""
 {
-draw_set_color(c_black) //make_color_rgb(180,180,0)
-draw_set_font(font_gui_mini)
-draw_text(view_xview+641,view_yview+669,"Information: "+string(global.info))
-
-draw_set_color(c_white) //make_color_rgb(180,180,0)
-draw_set_font(font_gui_mini)
-draw_text(view_xview+640,view_yview+670,"Information: "+string(global.info))
+    draw_set_color(c_orange)
+    draw_set_font(font_gui_mini)
+    draw_text(view_xview+400,view_yview+670,"Information: "+string(global.info))
 }
 
-//HUD
-if instance_exists(obj_control)
-    draw_sprite(spr_HUD,image_index,view_xview,view_yview+720)
+//draw_set_color(c_black)
+//make_color_rgb(255,155,6)
 </string>
           </argument>
         </arguments>

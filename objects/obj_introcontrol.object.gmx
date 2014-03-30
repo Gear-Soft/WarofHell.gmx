@@ -25,19 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Globale Variablen
-global.money = 900
+            <string>//Sound Engine Initalisieren
+sga_Init();
+
+//Globale Variablen
+global.music = ""
+global.wasmenu = false
+global.soundf = "data\sounds\"
+global.musicf = "data\music\"
+global.money = 1000
 global.lastroom = Menu
 global.ptower = "Mini"
 global.info = ""
-global.musicv = 0.3
-global.sfxv = 1
+global.musicv = 0.1
+global.sfxv = 0.1
 
 alarm[0] = room_speed*6.5
 //sound_volume(snd_intro, global.musicv)
 //sound_play(snd_intro) //"Funktioniert nicht"
 
-audio_play_sound(snd_intro, true, 0)
+is = sga_TrackPlay(-1, global.soundf + "snd_intro.ogg", 0, 0)
+sga_SetVol(is, global.musicv)
+//audio_play_sound(snd_intro, true, 0)
 
 </string>
           </argument>
@@ -87,7 +96,7 @@ audio_play_sound(snd_intro, true, 0)
             <string>if mouse_check_button_pressed(mb_left)
 {
     room_goto(Menu)
-    audio_stop_sound(snd_intro)
+    sga_DestroyEmitter(is)
 }
 </string>
           </argument>

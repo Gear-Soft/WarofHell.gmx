@@ -31,7 +31,9 @@
     {
         global.ptower = "MiniMG"
         global.money -= 1000
-        audio_play_sound(snd_buy, true, 0)
+        
+        buysound = sga_TrackPlay(-1, global.soundf + "snd_buy.ogg", 0, 0)
+        sga_SetVol(buysound, global.sfxv)
     }
 }
 </string>

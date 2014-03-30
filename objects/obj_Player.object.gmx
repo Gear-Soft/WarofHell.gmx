@@ -157,8 +157,10 @@ if mouse_check_button_pressed(mb_left)
         {
         shot_index = 1
         //sound_play(snd_shot)
-        audio_play_sound(snd_shot, true, 0) //&lt;- Das nur wenn NEw AUdio Engine
-        //audio_play_sound((working_directory + "\data\sounds\snd_mgshot.ogg"), true, 0) 
+        //audio_play_sound(snd_shot, true, 0) //&lt;- Das nur wenn NEw AUdio Engine
+        shotsound = sga_TrackPlay(-1, global.soundf + "snd_shot.ogg", 0, 0)
+        sga_SetVol(shotsound, global.sfxv)
+        
         id_bullet = instance_create(x,y,obj_bullet)
         id_bullet.direction = point_direction(x,y,mouse_x,mouse_y)
         id_bullet.image_angle = point_direction(x,y,mouse_x,mouse_y)
@@ -175,7 +177,9 @@ if mouse_check_button(mb_right)
         if shot_charge_sec &gt;= 10
         {
         //sound_play(snd_mgshot)
-        audio_play_sound(snd_mgshot, true, 0) 
+        shotsoundMG = sga_TrackPlay(-1, global.soundf + "snd_mgshot.ogg", 0, 0)
+        sga_SetVol(shotsoundMG, global.sfxv)
+        
         id_bullet1 = instance_create(MGX,MGY,obj_MGbullet)
         id_bullet1.direction = point_direction(x,y,mouse_x,mouse_y)
         id_bullet1.image_angle = point_direction(x,y,mouse_x,mouse_y)
