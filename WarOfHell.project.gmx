@@ -330,6 +330,7 @@
       <sprite>sprites\spr_ETowerMini</sprite>
       <sprite>sprites\spr_enemywreck</sprite>
       <sprite>sprites\spr_ETowerMiniWreck</sprite>
+      <sprite>sprites\spr_enemeySoldier</sprite>
     </sprites>
     <sprites name="FX">
       <sprite>sprites\spr_explosion</sprite>
@@ -340,6 +341,7 @@
       <sprite>sprites\spr_continue</sprite>
       <sprite>sprites\spr_new</sprite>
       <sprite>sprites\spr_end</sprite>
+      <sprite>sprites\spr_options</sprite>
       <sprite>sprites\spr_logo</sprite>
     </sprites>
     <sprites name="Buildings">
@@ -349,7 +351,14 @@
       <sprite>sprites\spr_shopsign</sprite>
       <sprite>sprites\spr_KFZ</sprite>
       <sprite>sprites\spr_tankdeco</sprite>
-      <sprite>sprites\spr_house1</sprite>
+      <sprites name="houses">
+        <sprite>sprites\spr_house1</sprite>
+        <sprite>sprites\spr_house2</sprite>
+        <sprite>sprites\spr_house3</sprite>
+        <sprite>sprites\spr_house4</sprite>
+        <sprite>sprites\spr_house5</sprite>
+        <sprite>sprites\spr_house6</sprite>
+      </sprites>
     </sprites>
     <sprites name="projectiles">
       <sprite>sprites\spr_bulletenemy</sprite>
@@ -414,6 +423,9 @@
       <script>scripts\sga_SetLooping.gml</script>
       <script>scripts\sga_SetCamPos.gml</script>
     </scripts>
+    <scripts name="gearsoft">
+      <script>scripts\load_ini.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_gui</font>
@@ -444,10 +456,12 @@
       <object>objects\obj_new</object>
       <object>objects\obj_end</object>
       <object>objects\obj_continue</object>
+      <object>objects\obj_options</object>
       <object>objects\obj_logo</object>
     </objects>
     <objects name="Enemys">
       <object>objects\obj_enemy</object>
+      <object>objects\obj_enemySoldier</object>
       <object>objects\obj_enemywreck</object>
       <object>objects\obj_ETowerMiniWreck</object>
       <object>objects\obj_bulletenemy</object>
@@ -455,6 +469,11 @@
     <objects name="Buildings">
       <objects name="houses">
         <object>objects\obj_house1</object>
+        <object>objects\obj_house2</object>
+        <object>objects\obj_house3</object>
+        <object>objects\obj_house4</object>
+        <object>objects\obj_house5</object>
+        <object>objects\obj_house6</object>
       </objects>
       <object>objects\obj_hangar</object>
       <object>objects\obj_defwall</object>
@@ -471,10 +490,12 @@
       <object>objects\obj_EnemMGBunker</object>
       <object>objects\obj_EnemyMGBunker_des</object>
     </objects>
+    <object>objects\obj_trigger</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Intro</room>
     <room>rooms\Menu</room>
+    <room>rooms\Options</room>
     <room>rooms\Shop</room>
     <room>rooms\KFZ</room>
     <rooms name="Map">

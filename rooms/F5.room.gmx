@@ -67,12 +67,13 @@
     <instance objName="obj_enemy" x="823" y="475" name="inst_34711271" locked="0" code="path_start(Patrol1, 3, 2, false)&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_EnemMGBunker" x="1216" y="1280" name="inst_FBFA660D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_EnemMGBunker" x="1536" y="1280" name="inst_E63FC954" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="270"/>
-    <instance objName="obj_house1" x="1280" y="1152" name="inst_6ED25FE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_house1" x="1280" y="1152" name="inst_BCF40652" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_house1" x="1472" y="896" name="inst_08A4D701" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_house1" x="1472" y="640" name="inst_0BD0AAC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_house1" x="1472" y="384" name="inst_6A891D70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_house1" x="1280" y="896" name="inst_9C62BFAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_house1" x="1728" y="896" name="inst_08A4D701" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
+    <instance objName="obj_house1" x="1728" y="896" name="inst_84CAD8FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="-90"/>
+    <instance objName="obj_house6" x="1024" y="896" name="inst_2AB6FF54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_house4" x="1017" y="606" name="inst_9B4180CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_house5" x="1733" y="831" name="inst_20E57C05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_house3" x="1343" y="334" name="inst_C73DD4CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="45"/>
+    <instance objName="obj_trigger" x="0" y="384" name="inst_A8C91590" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Player" x="2432" y="3072" name="inst_5E3F235F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="89"/>
     <instance objName="obj_hangar" x="2560" y="2624" name="inst_98D7C0ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_defwall" x="2176" y="2880" name="inst_FA03692B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

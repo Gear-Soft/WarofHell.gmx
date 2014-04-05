@@ -33,20 +33,7 @@ global.sfxv = 0.5
 sga_Init();
 
 //Ini Datei Laden
-if !file_exists(global.inifile)
-    {
-    ini_open(global.inifile)
-    ini_write_real("Volume","musicv", global.musicv)
-    ini_write_real("Volume","sfxv", global.sfxv)
-    ini_close()
-    }
-    else
-    {
-    ini_open(global.inifile)
-    global.musicv = ini_read_real("Volume","musicv", '')
-    global.sfxv = ini_read_real("Volume","sfxv", '')
-    ini_close()
-    }
+load_ini(global.inifile)
 
 //Globale Variablen
 global.music = ""
@@ -66,6 +53,7 @@ is = sga_TrackPlay(-1, global.soundf + "snd_intro.ogg", 0, 0)
 sga_SetVol(is, global.musicv)
 //audio_play_sound(snd_intro, true, 0)
 
+randomize()
 </string>
           </argument>
         </arguments>
