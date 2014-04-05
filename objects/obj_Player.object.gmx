@@ -117,30 +117,30 @@ direction = dirmerk
 if keyboard_check(ord('D'))
 {
     if speed == 0
-        dirmerk -= 2
+        dirmerk -= 1
     
     if lastpressed = "w"        
-    direction -= 2
+    direction -= 1
     else if lastpressed = "s"
-    direction += 2
+    direction += 1
 }
 
 if keyboard_check(ord('A'))
 {
     if speed == 0
-        dirmerk += 2
+        dirmerk += 1
     
     if lastpressed = "w"        
-    direction += 2
+    direction += 1
     else if lastpressed = "s"
-    direction -= 2
+    direction -= 1
 }
 
 if keyboard_check(ord('W'))
 {
     lastpressed = "w"
     if speed &lt; max_speed
-        speed += 0.1
+        speed += 0.05
     else if speed &gt; max_speed
         speed = max_speed
 }
@@ -150,7 +150,7 @@ if keyboard_check(ord('S'))
     if speed &gt; 0
         speed -= 0.5
     else if speed &gt; min_speed
-        speed -= 0.1
+        speed -= 0.05
     else if speed &lt; min_speed
         speed = min_speed
 }
@@ -176,8 +176,8 @@ if mouse_check_button_pressed(mb_left)
         sga_SetVol(shotsound, global.sfxv)
         
         id_bullet = instance_create(x,y,obj_bullet)
-        id_bullet.direction = point_direction(x,y,mouse_x,mouse_y)
-        id_bullet.image_angle = point_direction(x,y,mouse_x,mouse_y)
+        id_bullet.direction = tower_dir
+        id_bullet.image_angle = tower_dir
         id_bullet.speed = 12
         shot_charge_prim = 0
         }
@@ -252,29 +252,25 @@ if view_xview &gt; room_width-view_wview
     view_xview = room_width-view_wview  
 if view_yview &gt; room_height-view_hview
     view_yview = room_height-view_hview
-/*    
-//Tower Richtung
-if tower_dir = 359 and tower_dir &gt; round(point_direction(x,y,mouse_x,mouse_y))
+    
+var mdir, dir_dif, dir_speed;
+dir_speed = 1.5; //Drehgeschwindigkeit
+mdir = point_direction(x,y,mouse_x,mouse_y);
+dir_dif = ((((tower_dir - mdir) mod 360) + 540) mod 360) - 180;
+if(dir_dif &gt; 0)
 {
-    tower_dir += 2
+if(abs(dir_dif) &gt; dir_speed)
+tower_dir -= dir_speed;
+else
+tower_dir = mdir;
 }
-
-if tower_dir = 0 and tower_dir &lt; round(point_direction(x,y,mouse_x,mouse_y))
+else
 {
-    tower_dir -= 2
+if(abs(dir_dif) &gt; dir_speed)
+tower_dir += dir_speed;
+else
+tower_dir = mdir;
 }
-
-
-if tower_dir &lt; round(point_direction(x,y,mouse_x,mouse_y))
-{
-    tower_dir += 2
-}
-
-else if tower_dir &gt; round(point_direction(x,y,mouse_x,mouse_y))
-{
-    tower_dir -= 2
-}
-*/
 
 //lastpointed_dir = round(point_direction(x,y,mouse_x,mouse_y))
 //if point_direction(x,y,mouse_x,mouse_y) &gt; tower_dir + 1 or point_direction(x,y,mouse_x,mouse_y) &lt; tower_dir + 1
@@ -401,7 +397,7 @@ else if tower_dir &gt; round(point_direction(x,y,mouse_x,mouse_y))
             <string>draw_sprite_ext(sprite_index,image_index,x,y,1,1,direction,c_white,1)
 
 if global.ptower = "Mini"
-    draw_sprite_ext(spr_PTowerMini,shot_index,x,y,1,1,point_direction(x,y,mouse_x,mouse_y),c_white,1)    
+    draw_sprite_ext(spr_PTowerMini,shot_index,x,y,1,1,tower_dir,c_white,1)    
 else if global.ptower = "MiniMG"
    draw_sprite_ext(spr_PTowerMiniMG,image_index,x,y,1,1,point_direction(x,y,mouse_x,mouse_y),c_white,1)
 </string>
