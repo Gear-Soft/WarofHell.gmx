@@ -191,7 +191,7 @@ if mouse_check_button(mb_right)
         if shot_charge_sec &gt;= 10
         {
         //sound_play(snd_mgshot)
-        shotsoundMG = sga_TrackPlay(-1, global.soundf + "snd_mgshot.ogg", 0, 0)
+        shotsoundMG = sga_TrackPlay(5, global.soundf + "snd_mgshot.ogg", 0, 0)
         sga_SetVol(shotsoundMG, global.sfxv)
         
         id_bullet1 = instance_create(MGX,MGY,obj_MGbullet)
