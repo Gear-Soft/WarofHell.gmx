@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.inifile = "datas.ini"
+            <string>///Game Variablen
+global.inifile = "datas.ini"
 global.musicv = 0.5
 global.sfxv = 0.5
 
@@ -44,6 +45,8 @@ global.money = 1000
 global.lastroom = Menu
 global.ptower = "Mini"
 global.info = ""
+global.dirmerk = 0
+global.lastspeed = 0
 
 alarm[0] = room_speed*6.5
 //sound_volume(snd_intro, global.musicv)

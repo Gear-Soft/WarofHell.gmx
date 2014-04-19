@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_save("WOH.save")
-global.lastroom = room
+            <string>///Start Variablen
+game_save("WOH.save")
 shot_charge_prim = 30
 shot_charge_sec = 10
 lastpressed = "w"
@@ -372,6 +372,77 @@ tower_dir = mdir;
           <argument>
             <kind>1</kind>
             <string>health -= 0.1
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.dirmerk = direction
+global.lastspeed = speed
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Room Start Einstellungen
+//gs_SpawnPlayerPos(x,y,direction)
+//x = Die X Position wo er gespawnt werden soll
+//y = Die Y Position wo er gespawnt werden soll
+//direction = Die Richtung wohin er schaut 180 = links , 90 = unten, 0 = rechts
+
+speed = global.lastspeed
+
+//Room F5
+if room = F5 and global.lastroom = F4 then gs_SpawnPlayerPos(10,448,global.dirmerk)
+//Room F4
+if room = F4 and global.lastroom = F5 then gs_SpawnPlayerPos(3188,512,global.dirmerk)
+if room = F4 and global.lastroom = E4 then gs_SpawnPlayerPos(1856,0,90)
+
+
+
+
+
+
+
+
+
+
+//Lastroom Setzen
+global.lastroom = room
 </string>
           </argument>
         </arguments>

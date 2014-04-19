@@ -25,11 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if obj_Player.x &lt;= 2 and obj_Player.y &gt; 384 and obj_Player.y &lt; 576
+            <string>//gs_chunkTrigger(x1,y1,x2,y2,room)
+
+if room = F5
 {
-    global.lastroom = F5
+    gs_chunkTrigger(-1,384,2,576,F4)
+
+
+
+}
+
+if room = F4
+{
+    gs_chunkTrigger(3199,435,3202,540,F5)
+    
+    
+    
+}
+
+/*
+if obj_Player.x &lt;= 2 and obj_Player.y &gt; 384 and obj_Player.y &lt; 576 and room = F5
+{
+    global.lastroom = room
     room_goto(F4)
 }
+*/
 </string>
           </argument>
         </arguments>

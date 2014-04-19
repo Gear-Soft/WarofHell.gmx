@@ -425,6 +425,8 @@
     </scripts>
     <scripts name="gearsoft">
       <script>scripts\load_ini.gml</script>
+      <script>scripts\gs_SpawnPlayerPos.gml</script>
+      <script>scripts\gs_chunkTrigger.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -501,6 +503,7 @@
     <rooms name="Map">
       <room>rooms\F5</room>
       <room>rooms\F4</room>
+      <room>rooms\E4</room>
     </rooms>
   </rooms>
   <constants number="1">
