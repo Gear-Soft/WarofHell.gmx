@@ -27,12 +27,9 @@
             <kind>1</kind>
             <string>if global.wasmenu = false
 {
-    global.music = sga_TrackPlay(-1, global.musicf + "music1.ogg", 0, 0)
-    sga_SetVol(global.music, global.musicv)
+    audio_play_music(snd_music9,0)
     global.wasmenu = true
 }
-
-show_debug_message(string(global.music))
 </string>
           </argument>
         </arguments>
@@ -64,13 +61,6 @@ else
 {
     image_xscale = 1
     image_yscale = 1
-}
-
-if sga_IsPlaying(global.music) = false
-{
-    sga_DestroyEmitter(global.music)
-    global.music = sga_TrackPlay(-1, global.musicf + "music2.ogg", 0, 0)
-    sga_SetVol(global.music, global.musicv)
 }
 </string>
           </argument>

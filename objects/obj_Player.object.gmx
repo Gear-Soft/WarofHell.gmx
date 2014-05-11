@@ -171,9 +171,7 @@ if mouse_check_button_pressed(mb_left)
         {
         shot_index = 1
         //sound_play(snd_shot)
-        //audio_play_sound(snd_shot, true, 0) //&lt;- Das nur wenn NEw AUdio Engine
-        shotsound = sga_TrackPlay(-1, global.soundf + "snd_shot.ogg", 0, 0)
-        sga_SetVol(shotsound, global.sfxv)
+        audio_play_sound(snd_shot, true, 0) //&lt;- Das nur wenn NEw AUdio Engine
         
         id_bullet = instance_create(x,y,obj_bullet)
         id_bullet.direction = tower_dir
@@ -191,8 +189,7 @@ if mouse_check_button(mb_right)
         if shot_charge_sec &gt;= 10
         {
         //sound_play(snd_mgshot)
-        shotsoundMG = sga_TrackPlay(5, global.soundf + "snd_mgshot.ogg", 0, 0)
-        sga_SetVol(shotsoundMG, global.sfxv)
+        audio_play_sound(snd_mgshot, true, 0)
         
         id_bullet1 = instance_create(MGX,MGY,obj_MGbullet)
         id_bullet1.direction = point_direction(x,y,mouse_x,mouse_y)
@@ -311,7 +308,7 @@ tower_dir = mdir;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>health -= 10
+            <string>health -= 0
 </string>
           </argument>
         </arguments>

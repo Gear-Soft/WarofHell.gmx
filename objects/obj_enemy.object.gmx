@@ -82,9 +82,10 @@ if reload &gt; 0
     reload -= 1  
   
 if (random(100) &lt; 1 and reload &lt;= 0)
-    if distance_to_object(obj_Player) &lt; 400
+    if distance_to_object(obj_Player) &lt; 380
     {
-        //audio_play_sound(snd_shot, true, 0) 
+        snd = audio_play_sound(snd_shot, true, 0)
+        audio_sound_gain(snd, gs_sound_distance(400), 0)
         id_bullet = instance_create(x,y,obj_bulletenemy)
         id_bullet.direction = point_direction(x,y,obj_Player.x,obj_Player.y)
         id_bullet.speed = 12
